@@ -1,0 +1,11 @@
+node_modules
+build
+dist
+migrations
+.DS_Store
+.env
+.env.development
+*.cmd
+.vercel
+.env.development
+.next
