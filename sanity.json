@@ -13,9 +13,10 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "barcode-input",
     "@sanity/vision",
+    "@sanity/color-input",
     "media",
+    "seo-tools",
     "datatable",
     "conditional-field"
   ],
@@ -26,14 +27,25 @@
       ]
     }
   },
-  "parts": [
-    {
+  "parts": [{
       "implements": "part:@sanity/form-builder/input/image/asset-sources",
       "path": "./parts/assetSources.js"
     },
     {
+      "name": "part:@sanity/base/initial-value-templates",
+      "path": "./parts/initialValueTemplates.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input-resolver",
+      "path": "./parts/inputResolver.js"
+    },
+    {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/desk-tool/structure",
+      "path": "./src/deskStructure"
     }
   ]
 }
