@@ -1,0 +1,54 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "g8l1lgh4",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "Barberhouse Admin",
+    "basePath": "/"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/vision",
+    "@sanity/color-input",
+    "media",
+    "seo-tools",
+    "graph-view",
+    "datatable",
+    "conditional-field"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
+    },
+    {
+      "name": "part:@sanity/base/initial-value-templates",
+      "path": "./parts/initialValueTemplates.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input-resolver",
+      "path": "./parts/inputResolver.js"
+    },
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/desk-tool/structure",
+      "path": "./src/deskStructure"
+    }
+  ]
+}

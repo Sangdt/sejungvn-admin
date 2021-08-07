@@ -6,6 +6,3 @@ migrations
 .env
 .env.development
 *.cmd
-.vercel
-.env.development
-.next

@@ -13,7 +13,11 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "barcode-input"
+    "barcode-input",
+    "@sanity/vision",
+    "media",
+    "datatable",
+    "conditional-field"
   ],
   "env": {
     "development": {
@@ -23,6 +27,10 @@
     }
   },
   "parts": [
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
+    },
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
